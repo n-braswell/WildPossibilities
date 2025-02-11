@@ -47,12 +47,13 @@ This repository includes the following materials:
 - **`/data/`** – Raw and processed data from each experiment.
 - **`/analysis/`** – Python and R scripts for preprocessing and statistical analysis.
 - **`/demos/`** – Videos demonstrating the experimental procedure.
+- **`/preregistrations/`** – Our anonymized preregistrations for Experiments 1, 2, and 4 (see note below).
 
 ## Note on Demonstration Videos  
-This repository includes a selection of **pre-approved demonstration videos** that illustrate the experimental procedure. These videos were approved for release in accordance with **Cayo Santiago Biological Field Station policies**. While these examples are representative of the demonstrations used in all trials, full video records are not publicly available under site regulations.
+This repository includes a selection of **pre-approved demonstration videos** that illustrate the procedure of each experiment. These trial videos were approved for release in accordance with **Cayo Santiago Biological Field Station policies**. While these examples are representative of the demonstrations used in all trials, full video records are not publicly available under site regulations.
 
 ## Note on Preregistration for Experiment 2
-We do not have a preregistration for Experiment 2 because it was initially conducted as a small-scale pilot to confirm that our approach paradigm was effective and that monkeys were receptive to engaging with the apparatus. As our study progressed, we expanded this experiment into a full design alongside Experiment 1. The role that Experiment 2 plays in the paper was formulated only after weeks of testing and developing an intuitions on optimal performance in this population. Given its exploratory origins, preregistration was not part of our process for this experiment. 
+We do not have a preregistration for Experiment 2 because it was initially conducted as a small-scale pilot to confirm that our approach paradigm was effective and that monkeys were receptive to engaging with the apparatus. As our study progressed, we expanded this experiment into a full design alongside Experiment 1. The role that Experiment 2 plays in the paper was formulated only after developing intuitions about optimal performance in this population. Given its exploratory origins, preregistration was not part of our process for this experiment. 
 
 ## Noted Deviations from Preregistrations
 #### **Preregistration for Experiment 4: Citation Error**  

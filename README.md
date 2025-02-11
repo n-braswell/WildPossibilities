@@ -15,7 +15,7 @@ We conducted **four experiments** that systematically examine how macaques track
 - **Results**: Macaques overwhelmingly preferred the certain reward, performing significantly above chance.  
 
 
-### **Experiment 2: Controlling for Minimal Representation**  
+### **Experiment 2: Controlling for minimal representation**  
 - **Goal**: Test whether macaques’ performance in Experiment 1 was due to simply guessing the location of a hidden reward.  
 - **Procedure**:  
   - Instead of a possible reward, a guaranteed non-reward (a rock) was placed in one cup.  
@@ -24,7 +24,7 @@ We conducted **four experiments** that systematically examine how macaques track
 - **Results**: Performance remained stable, ruling out the possibility that subjects were merely simulating one possible location.
 
 
-### **Experiment 3: Avoidance vs. Modal Reasoning**  
+### **Experiment 3: Avoidance vs. modal cognition**  
 - **Goal**: Rule out procedural artifacts or avoidance heuristics driving behavior in Experiments 1 and 2.  
 - **Procedure**:  
   - The guaranteed reward on the single-cup side was replaced with a non-reward (a rock).  
@@ -33,7 +33,7 @@ We conducted **four experiments** that systematically examine how macaques track
 - **Results**: Macaques **preferred the possible reward**, confirming they were not simply avoiding objects like the rock.
 
 
-### **Experiment 4: The Challenge of Representing Absence**  
+### **Experiment 4: 3 cup task - original**  
 - **Goal**: Test whether macaques’ success in the first three experiments was due to the removal of an empty cup as a possibility.  
 - **Procedure**:  
   - Reintroduced an empty cup as an option in the 3-cup setup.  
@@ -42,17 +42,16 @@ We conducted **four experiments** that systematically examine how macaques track
 - **Results**: Performance dropped to **chance level**, suggesting that macaques struggle when required to consider the possibility of an empty location.
 
 
-## 📂 Repository Contents
+## Repository Contents
 This repository includes the following materials:
 - **`/data/`** – Raw and processed data from each experiment.
 - **`/analysis/`** – Python and R scripts for preprocessing and statistical analysis.
 - **`/demos/`** – Videos demonstrating the experimental procedure.
 
-## 🎥 Demonstration Videos  
+## Demonstration Videos  
 This repository includes a selection of **pre-approved demonstration videos** that illustrate the experimental procedure. These videos were approved for release in accordance with **Cayo Santiago Biological Field Station policies**. While these examples are representative of the demonstrations used in all trials, full video records are not publicly available under site regulations.
 
-
-## 🔧 How to Use This Repository
+## How to Use This Repository
 1. **Clone this repository** to your local machine:
    ```bash
    git clone https://github.com/your-username/WildPossibilities.git

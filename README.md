@@ -48,8 +48,19 @@ This repository includes the following materials:
 - **`/analysis/`** – Python and R scripts for preprocessing and statistical analysis.
 - **`/demos/`** – Videos demonstrating the experimental procedure.
 
-## Demonstration Videos  
+## Note on Demonstration Videos  
 This repository includes a selection of **pre-approved demonstration videos** that illustrate the experimental procedure. These videos were approved for release in accordance with **Cayo Santiago Biological Field Station policies**. While these examples are representative of the demonstrations used in all trials, full video records are not publicly available under site regulations.
+
+## Note on Preregistration for Experiment 2
+We do not have a preregistration for Experiment 2 because it was initially conducted as a small-scale pilot to confirm that our approach paradigm was effective and that monkeys were receptive to engaging with the apparatus. As our study progressed, we expanded this experiment into a full design alongside Experiment 1. The role that Experiment 2 plays in the paper was formulated only after weeks of testing and developing an intuitions on optimal performance in this population. Given its exploratory origins, preregistration was not part of our process for this experiment. 
+
+## Noted Deviations from Preregistrations
+#### **Preregistration for Experiment 4: Citation Error**  
+We initially cited Mody & Carey (2016) in reference to previous research on this question in nonhuman primates (Call, 2004, 2006; Ferrigno, Huang, & Cantlon, 2021), describing the results as inconclusive. While these studies have indeed yielded inconclusive findings, we are not aware of any claim in Mody & Carey (2016) that directly characterizes primate results in this way.  
+
+#### **Preregistration for Experiment 4: Observation Period Change**  
+We erroneously preregistered a 1-minute observation period but ultimately used a **30-second observation period**. This change was made prior to data collection based on Experiments 1 and 2, where no subjects approached after 30 seconds. At the time of testing, we observed no indication that subjects who had not approached within 30 seconds were preparing to do so.  
+
 
 ## How to Use This Repository
 1. **Clone this repository** to your local machine:

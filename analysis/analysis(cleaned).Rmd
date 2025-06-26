@@ -1,0 +1,112 @@
+---
+title: "Wild Possibilities"
+author: "Nathaniel Braswell*, Madeline Meade*, Nicolò Cesana-Arlotti, Laurie Santos"
+date: "2/11/2025"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+repository: "https://github.com/n-braswell/WildPossibilities"
+description: |
+  Analysis script for all four experiments. *Denotes equal contribution. Direct questions to            nathaniel.braswell@yale.edu
+---
+
+# packages
+```{r}
+library(dplyr)
+library(ggplot2)
+library(BayesFactor)
+library(lmerTest)
+library(lme4)
+```
+
+# directory
+```{r}
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+```
+
+# experiment 1
+```{r}
+exp1 <- read.csv("E1.data.csv")
+
+# main effect
+binom.test(sum(exp1$choice.bin == 1), nrow(exp1), p = 0.5, alternative="greater")
+
+# exploratory
+exp1$sex <- as.factor(exp1$sex)
+glm.exp1 <- glm(choice.bin ~ age, data = exp1, family = binomial)
+summary(glm.exp1)
+chisq.test(table(exp1$sex, exp1$choice.bin))
+chisq.test(table(exp1$single.side, exp1$choice.bin))
+chisq.test(table(exp1$hidden.first, exp1$choice.bin))
+chisq.test(table(exp1$box.removed, exp1$choice.bin))
+```
+
+
+# experiment 2
+```{r}
+exp2 <- read.csv("E2.data.csv")
+
+# main effect
+binom.test(sum(exp2$choice.bin == 1), nrow(exp2), p = 0.5, alternative = "greater")
+
+# exploratory
+glm.exp2 <- glm(choice.bin ~ age, data = exp2, family = binomial)
+summary(glm.exp2)
+exp2$sex <- as.factor(exp2$sex)
+chisq.test(table(exp2$sex, exp2$choice.bin))
+chisq.test(table(exp2$apple.side, exp2$choice.bin))
+
+# bayesian contingency - e1 vs e2
+exp1.table <- table(exp1$choice.bin)
+exp2.table <- table(exp2$choice.bin)
+exp12.table <- cbind(exp1.table, exp2.table)
+contingencyTableBF(exp12.table, sampleType = "indepMulti", fixedMargin = "rows")
+```
+
+
+# experiment 3
+```{r}
+exp3 <- read.csv("E3.data.csv")
+
+# main effect
+binom.test(sum(exp3$choice.bin == 1), nrow(exp3), p = 0.5, alternative = "greater")
+
+# exploratory
+glm.exp3 <- glm(choice.bin ~ age, data = exp3, family = binomial)
+summary(glm.exp3)
+chisq.test(table(exp3$sex, exp3$choice.bin))
+chisq.test(table(exp3$single.side, exp3$choice.bin))
+chisq.test(table(exp3$hidden.first, exp3$choice.bin))
+chisq.test(table(exp3$box.removed, exp3$choice.bin))
+
+# bayesian contigency - e1 vs e3
+exp13.table <- cbind(table(exp1$choice.bin), table(exp3$choice.bin))
+contingencyTableBF(exp13.table, sampleType = "indepMulti", fixedMargin = "rows")
+```
+
+# experiment 4
+```{r}
+exp4 <- read.csv("E4.data.csv")
+
+# bayesian test for null
+binom.test(sum(exp4$choice.bin == 1), nrow(exp4), p = 0.5, alternative = "greater")
+bf <- proportionBF(
+  y = successes,
+  N = trials,
+  p = 0.5,
+  nullInterval = c(0.5, 1),  
+  rscale = "ultrawide"
+)
+
+bfn <- extractBF(bf)$bf[1]
+cat("Bayes Factor (BF10, greater than 50%):", bfn, "\n")
+
+
+# exploratory
+glm.exp4 <- glm(choice.bin ~ age, data = exp4, family = binomial)
+summary(glm.exp4)
+chisq.test(table(exp4$sex, exp4$choice.bin))
+chisq.test(table(exp4$single.side, exp4$choice.bin))
+chisq.test(table(exp4$hidden.first, exp4$choice.bin))
+```
+
